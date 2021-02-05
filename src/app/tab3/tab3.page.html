@@ -1,0 +1,108 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Configurações
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-col></ion-col>
+
+  <!-- Aba GERAL das configurações -->
+
+<h3>   Geral</h3>
+
+<!-- Modo Escuro -->
+
+<ion-card>
+ <ion-item>
+   <ion-icon slot="start" name="moon-sharp" color="primary"></ion-icon>
+   <ion-toggle  checked slot="end"></ion-toggle>
+   <ion-label>
+    Modo Escuro
+  </ion-label>
+ </ion-item>
+</ion-card>
+
+<!-- Tipo de Moeda -->
+
+<ion-card>
+  <ion-item>
+    <ion-icon slot="start" name="cash-sharp" color="success"></ion-icon>
+    <ion-label>
+     Moeda
+   </ion-label>
+   <ion-label>
+                    BRL
+   </ion-label>
+   <h5><ion-icon name="chevron-forward" slot="end"></ion-icon></h5>
+  </ion-item>
+ </ion-card>
+
+ <!-- Idioma -->
+
+ <ion-card>
+  <ion-item>
+    <ion-icon slot="start" name="language-sharp" color="primary"></ion-icon>
+    <ion-label>
+     Idioma
+   </ion-label>
+   <ion-label>
+                  PT-BR
+   </ion-label>
+   <h5><ion-icon name="chevron-forward" slot="end"></ion-icon></h5>
+  </ion-item>
+ </ion-card>
+
+
+
+  <!-- Aba SEGURANÇA das configurações -->
+
+<h3>   Segurança</h3>
+
+<!-- Bloqueio definido para acessar o app -->
+
+<ion-card>
+  <ion-item>
+    <ion-icon slot="start" name="lock-closed" color="warning"></ion-icon>
+    <ion-label>
+     Bloqueio
+   </ion-label>
+   <ion-label>
+                      PIN
+   </ion-label>
+   <h5><ion-icon name="chevron-forward" slot="end"></ion-icon></h5>
+  </ion-item>
+ </ion-card>
+
+
+  <!-- Aba Outros das configurações -->
+
+<h3>   Outros</h3>
+
+<!-- Redefinir o saldo -->
+
+<ion-card>
+  <ion-item>
+    <ion-icon slot="start" name="repeat-outline" color="tertiary"></ion-icon>
+    <ion-label>
+     Redefinir saldo
+   </ion-label>
+  </ion-item>
+ </ion-card>
+
+ <!-- Sair do app :( -->
+
+ <ion-card>
+  <ion-item>
+    <ion-icon slot="start" name="sad-outline" color="danger"></ion-icon>
+    <ion-label color="danger">
+     Sair
+   </ion-label>
+   <h2><ion-icon name="log-out-outline" slot="end" color="danger"></ion-icon></h2>
+  </ion-item>
+ </ion-card>
+
+</ion-content>

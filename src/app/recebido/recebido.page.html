@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recebido em Janeiro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <ion-card *ngFor="let lancamento of listaLancamentos" (click)="alterarLancamento(lancamento.key)">
+  <ion-card-header>
+    <ion-card-title color="primary">Dia 02</ion-card-title>
+    <ion-card-title color="success"><h1>R$ {{lancamento.valor}}</h1></ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <h2>{{lancamento.descricao}}</h2>
+  </ion-card-content>
+</ion-card> 
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title color="primary">Dia 15</ion-card-title>
+    <ion-card-title color="success"><h1>R$ 1384,00</h1></ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <h2>Salário</h2>
+  </ion-card-content>
+</ion-card>
+
+<ion-fab vertical="bottom" horizontal="end" (click)="chamarFormulario()">
+  <ion-fab-button color="primary"> 
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+</ion-content>

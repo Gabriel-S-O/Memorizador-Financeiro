@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+    <ion-title>Recebido</ion-title>
+    <ion-item>
+      <ion-toggle checked="true"></ion-toggle>
+      <ion-label>A receber </ion-label>
+    </ion-item>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-col></ion-col>
+
+<!-- precisa alinhar o ícone com a label -->
+
+<ion-item>
+  <ion-icon name="cash" slot="start" color="success"></ion-icon>
+  <ion-label color="primary" position="floating">Informe o valor recebido</ion-label>
+      <ion-input color="success" type="number"></ion-input>
+</ion-item>
+
+<ion-col></ion-col> <!-- não sei pular linha -->
+
+<ion-item>
+  <ion-icon name="calendar-outline" slot="start"></ion-icon>
+  <ion-label color="primary" position="stacked">Data</ion-label>
+      <ion-input type="date"></ion-input>
+</ion-item>
+
+<ion-col></ion-col>
+
+<!-- também precisa alinhar o ícone com a label -->
+
+<ion-item>
+  <ion-icon name="brush" slot="start" color="dark"></ion-icon>
+  <ion-label color="primary" position="floating">Descrição (opcional)</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item>
+
+<ion-col></ion-col> <!-- Já sabe -->
+
+<!-- categorias para o usuário escolher onde o dinheiro foi gasto/recebido -->
+
+<ion-row>
+
+  <ion-grid>
+    <ion-item color="success">
+      <ion-icon name="briefcase" ></ion-icon>
+      <ion-label> Salário</ion-label>
+    </ion-item>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-item color="warning">
+      <ion-icon name="home" ></ion-icon>
+      <ion-label> Aluguel</ion-label>
+    </ion-item>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-item color="danger">
+      <ion-icon name="business" ></ion-icon>
+      <ion-label> Vendas</ion-label>
+    </ion-item>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-item color="tertiary">
+      <ion-icon name="bulb"></ion-icon>
+      <ion-label> Outros</ion-label>
+    </ion-item>
+  </ion-grid>
+  
+
+</ion-row>
+
+<!-- botão para confirmar o registro -->
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button color="success"> 
+    <ion-icon name="checkmark-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<!-- botão para cancelar o registro -->
+
+<ion-fab vertical="bottom" horizontal="start">
+  <ion-fab-button color="danger"> 
+    <ion-icon name="close-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+</ion-content>

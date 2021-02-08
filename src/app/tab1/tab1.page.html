@@ -30,7 +30,7 @@
   <ion-card>
     <ion-item> <!-- Saldo -->
       <ion-icon name="wallet-outline" slot="start" color="primary"></ion-icon>
-      <ion-label color="success">Saldo = R$ 675,00</ion-label>
+      <ion-label color="success">Saldo = R$ {{saldoMes}}</ion-label>
       <ion-button slot="end" fill="clear">
         <h2><ion-icon color="dark" name="pencil" slot="end"></ion-icon></h2> <!-- Para alterar manualmente o saldo -->
       </ion-button>
@@ -43,14 +43,14 @@
   <ion-card>
     <ion-item> <!-- Recebido -->
       <ion-icon name="trending-up-outline" slot="start" color="primary"></ion-icon>
-      <ion-label color="success" (click)="chamarRecebido()">Recebido = R$ 1416,00</ion-label>
+      <ion-label color="success" (click)="chamarRecebido()">Recebido = R$ {{valorRecebido}}</ion-label>
       <ion-button slot="end" fill="clear"> <!-- Esses + vão jogar direto pro formulário -->
         <h2><ion-icon color="dark" name="add-outline" slot="end"></ion-icon></h2>
       </ion-button>      
     </ion-item>
     <ion-item> <!-- Pago -->
       <ion-icon name="trending-down-outline" slot="start" color="primary"></ion-icon>
-      <ion-label color="danger" (click)="chamarPago()">Pago = R$ 45,00</ion-label>
+      <ion-label color="danger" (click)="chamarPago()">Pago = R$ {{valorDespesa}}</ion-label>
       <ion-button slot="end" fill="clear">
         <h2><ion-icon color="dark" name="add-outline" slot="end"></ion-icon></h2>
       </ion-button>
@@ -60,14 +60,14 @@
   <ion-card>
     <ion-item> <!-- À receber -->
       <ion-icon name="swap-vertical-outline" slot="start" color="primary"></ion-icon>
-      <ion-label color="success" (click)="chamarReceber()">À receber = R$ 50,00</ion-label>
+      <ion-label color="success" (click)="chamarReceber()">À receber = R$ {{valorReceber}}</ion-label>
       <ion-button slot="end" fill="clear">
         <h2><ion-icon color="dark" name="add-outline" slot="end"></ion-icon></h2>
       </ion-button>
     </ion-item>
     <ion-item> <!-- À pagar -->
       <ion-icon name="swap-horizontal-outline" slot="start" color="primary"></ion-icon>
-      <ion-label color="danger" (click)="chamarPagar()">À pagar = R$ 220,00</ion-label>
+      <ion-label color="danger" (click)="chamarPagar()">À pagar = R$ {{valorPagar}}</ion-label>
       <ion-button slot="end" fill="clear">
         <h2><ion-icon color="dark" name="add-outline" slot="end"></ion-icon></h2>
       </ion-button>

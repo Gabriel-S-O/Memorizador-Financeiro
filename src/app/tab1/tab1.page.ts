@@ -16,8 +16,6 @@ export class Tab1Page implements OnInit {
   valorDespesa = 0;
   valorPagar = 0;
 
- 
-
   constructor(public router:Router, public lancamentosService:LancamentosService) {}
 
   ngOnInit() {
@@ -33,21 +31,21 @@ export class Tab1Page implements OnInit {
 
        res.forEach(item => {
         let a = item.payload.toJSON();
-        if(a['tipo'] == 'recebido' && a['situacao'] == 1){
+        if(a['tipo'] == 'recebido' && a['situacao'] == 0){
           this.valorRecebido += parseFloat(a['valor']);
-        }else if(a['tipo'] == 'recebido' && a['situacao'] == 0){
+        }else if(a['tipo'] == 'recebido' && a['situacao'] == 1){
           this.valorReceber += parseFloat(a['valor']);
         }
 
-        if(a['tipo'] == 'despesa' && a['situacao'] == 1){
+        if(a['tipo'] == 'despesa' && a['situacao'] == 0){
           this.valorDespesa += parseFloat(a['valor']);
-        }else if(a['tipo'] == 'depesa' && a['situacao'] == 0){
+        }else if(a['tipo'] == 'depesa' && a['situacao'] == 1){
           this.valorPagar += parseFloat(a['valor']);
         }
         
       })
+      this.saldoMes = (this.valorRecebido + this.valorReceber) - (this.valorDespesa + this.valorPagar);
     })
-    this.saldoMes = (this.valorRecebido + this.valorReceber) - (this.valorDespesa + this.valorPagar);
   }
 
   chamarRecebido(){

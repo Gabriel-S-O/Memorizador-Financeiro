@@ -30,7 +30,7 @@ export class FormComponent implements OnInit {
       tipo:'recebido',
       categoria:'salário',
       dataLancamento:new Date(),
-      situacao:true
+      situacao:false
      };
       
     }
